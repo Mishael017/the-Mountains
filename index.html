@@ -72,24 +72,19 @@
                 <h1>Be prepared for the Mountains and beyond!</h1>
 
                 <div class="navigation">
-                   <a class="nav">scroll down</a>
+                   <a href="#one" class="nav">scroll down</a>
                 </div>
 
             </div>
 
-            <div class="slider">
+            
                 <div class="scale">
-                    <a class="start">Start</a>
-                    <a class="one">01</a>
-                    <a class="two">02</a>
-                    <a class="three">03</a>
+                    <a href="#start" class="start">Start</a>
+                    <a href="#one" class="one">01</a>
+                    <a href="#two" class="two">02</a>
+                    <a href="#three" class="three">03</a>
                 </div>
               
-                <div class="thumbnail">
-                  <input class="cursor" type="range" id="r1" min="0" max="3.7" step="1" value="0">
-                </div>                     
-            </div>
-  
        </div>
        
     </header>
@@ -97,7 +92,7 @@
     <section class="main"> 
         <div class="container">
 
-             <article class="article">
+             <article class="article" id="one">
 
                  <div class="text text-one">
                      <div class="subtitle">GEt Started</div>
@@ -114,7 +109,7 @@
 
              </article>
 
-             <article class="article">
+             <article class="article" id="two">
 
                 <div class="text text-two">
                     <div class="subtitle">Hiking Essentials</div>
@@ -131,7 +126,7 @@
                 </div>
             </article>
 
-            <article class="article">
+            <article class="article" id="three">
 
                 <div class="text text-three">
                     <div class="subtitle">Hikiwhere you go is the keyng Essentials</div>
@@ -152,43 +147,47 @@
     </section>
 
     <footer>
+        <div class="container">
         <section class="footer">
             
-            <div class="column column-one">
-                <div class="logo">MNTN</div>
-                <p class="footer-text">Get out there & discover your next slope, mountain & destination!</p> 
-            </div>
-           
-            <div class="column column-two">
-                <h3>More on The Blog</h3>
-                <uL>
-                    <li>About MNTN</li>
-                    <li>Contributors & Writers</li>
-                    <li>Write For Us</li>
-                    <li>Contact Us</li>
-                    <li>Privacy Policy</li>
-                </uL>
-            </div>
+            
+                <div class="column column-one">
+                    <div class="logo">MNTN</div>
+                    <p class="footer-text">Get out there & discover your next slope, mountain & destination!</p> 
+                </div>
+            
+                <div class="column column-two">
+                    <h3>More on The Blog</h3>
+                    <ul>
+                        <li><a href="#">About MNTN</a></li>
+                        <li><a href="#">Contributors & Writers</a></li>
+                        <li><a href="#">Write For Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
 
-            <div class="column column-three">
-                <h3>More on MNTN</h3>
-                <ul>
-                    <li>The Team</li>
-                    <li>Jobs</li>
-                    <li>Press</li>
-                </ul>
-            </div>
+                <div class="column column-three">
+                    <h3>More on MNTN</h3>
+                    <ul>
+                        <li><a href="#">The Team</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
 
-            <div class="copyright">
-                <p >Copyright 2019 MNTN, Inc. Terms & Privacy</p>
-            </div>
+                <div class="copyright">
+                    <p >Copyright 2019 MNTN, Inc. Terms & Privacy</p>
+                </div>
 
+            
        </section>
+    </div>
     </footer>
 
     
-
-    <script src="./js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
