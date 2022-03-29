@@ -11,8 +11,18 @@
 }
 @font-face {
     font-family: Gilroy;
-    src: url("../fonts/Gilroy/Gilroy-Bold.ttf");
+    src: url("../fonts/Gilroy/Gilroy-Medium.otf");
+    src: url("../fonts/Gilroy/Gilroy-Medium.ttf");
+    src: url("../fonts/Gilroy/Gilroy-Medium.woff");
     font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url("../fonts/Gilroy/Gilroy-Bold.otf");
+    src: url("../fonts/Gilroy/Gilroy-Bold.ttf");
+    src: url("../fonts/Gilroy/Gilroy-Bold.woff");
     font-weight: 700;
     font-display: swap;
 }
@@ -21,7 +31,6 @@
     src: url("../fonts/Gilroy/Gilroy-ExtraBold.otf");
     src: url("../fonts/Gilroy/Gilroy-ExtraBold.ttf");
     src: url("../fonts/Gilroy/Gilroy-ExtraBold.woff");
-    font-style: normal;
     font-weight: 800;
     font-display: swap;
 }
@@ -103,7 +112,7 @@ header{
     color: #FBD784;
 }
 .logo{
-    font-size: 35px;
+    font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.01em;
     text-transform: capitalize;
@@ -111,6 +120,7 @@ header{
 }
 .account span{
     font-family: Gilroy;
+    font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     color: #FFFFFF;
@@ -256,6 +266,7 @@ button{
     text-decoration: none;
     color: #FFFFFF;
     font-family: Gilroy; 
+    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     display: block;
@@ -282,7 +293,7 @@ button{
 .title-text h1{
     font-family: Chronicle Display;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 74px;
     line-height: 74px;
     text-transform: capitalize;
@@ -375,7 +386,7 @@ button{
    font-family: Gilroy;
    font-style: normal;
    font-weight: bold;
-   font-size: 227px;
+   font-size: 240px;
    line-height: 240px;
    color: #FFFFFF;
    opacity: 0.1
@@ -396,7 +407,7 @@ button{
    font-family: Gilroy;
    font-style: normal;
    font-weight: bold;
-   font-size: 227px;
+   font-size: 240px;
    line-height: 240px;
    color: #FFFFFF;
    opacity: 0.1
@@ -415,7 +426,7 @@ button{
    font-family: Gilroy;
    font-style: normal;
    font-weight: bold;
-   font-size: 227px;
+   font-size: 240px;
    line-height: 240px;
    color: #FFFFFF;
    opacity: 0.1
@@ -424,7 +435,7 @@ button{
     font-family: Gilroy;
     font-style: normal;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 6px;
     text-transform: uppercase;
@@ -432,18 +443,18 @@ button{
     position: relative;
     margin-bottom: 13px;
     margin-top: -2px;
-    padding-left: 77px;
+    padding-left: 106px;
 }
 .subtitle::before{
     content: "";
     position: absolute;
-    left: 0;
+    left: 18px;
     top:50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     display: block;
-    width: 57px;
+    width: 72px;
     height: 2px;
     background-color: #FBD784;
 }
@@ -467,8 +478,9 @@ button{
 .link{
     display: inline-block;
     position: relative;
-    padding-right: 40px;
+    font-family: Gilroy;
     font-weight: 700;
+    padding-right: 40px;
     font-size: 18px;
     line-height: 22px;
     color: #FBD784;
@@ -534,7 +546,7 @@ button{
     font-weight: bold;
     font-size: 18px;
     line-height: 32px;
-    margin-bottom: 122px;
+    margin-bottom: 145px;
     width: 303px;
 }
 .copyright{
@@ -1027,14 +1039,60 @@ button{
 @media only screen and (max-width: 376px){
 
     .title-text .subtitle{
-        margin-left: -75px;
+        margin-left: -100px;
     }
     .title-text .subtitle::before{
-        left: 24%;
+        left: 30%;
         top: 103%;
     }
+    .title-text h1{
+        width: 136%;
+        font-size: 40px;
+    }
+    .text-one::before {
+        font-size: 156px;
+        margin-left: -16px;
+    }
+    .text-two::before {
+        font-size: 156px;
+        margin-left: -7px;
+    }
+    .text-three::before {
+        font-size: 156px;
+        margin-left: -7px;
+    }
+    .article .subtitle{
+        font-size: 12px;
+        padding-left: 83px;
+        margin-top: -45px;
+    }
+    .article .subtitle::before {
+        width: 40px;
+        left: 8%;
+    }
+    .article:nth-child(2) .subtitle{
+        font-size: 11px;
+        padding-left: 83px;
+        margin-top: -42px;
+    }
+    .article:nth-child(3) .subtitle {
+        line-height: 14px;
+        margin-left: 20px;
+        margin-top: -65px;
+        margin-bottom: 19px;
+    }
+    .container .title:nth-child(2) {
+        font-size: 38px;
+    }
+    .text p {
+        width: 328px;
+        margin-left: -26px;
+    }
     .height{
-        height: 406px;
+        height: 413px;
+    }
+    .footer{
+        margin-left: -7px;
     }
 }
 
@@ -1046,16 +1104,63 @@ button{
     .mobile_menu .menu ul{
         margin-left: 70px;
     }
+    .title-text .subtitle{
+        margin-left: -103px;
+    }
     .title-text .subtitle::before {
-        left: 27%;
+        left: 33%;
+    }
+    .title-text h1{
+        width: 136%;
+        font-size: 40px;
     }
     .scale{
         margin-right: -27px;
     }
     .height{
-        height: 348px;
+        height: 354px;
     }
     .container .article .thumnail img{
         margin-left: 3%;
+    }
+    .text-one::before {
+        font-size: 154px;
+        margin-left: 9px;
+    }
+    .text-two::before{
+        margin-left: 16px;
+    }
+    .text-three::before{
+        margin-left: 19px;
+    }
+    .article .subtitle{
+        margin-left: 25px;
+        padding-left: 104px;
+    }
+    .article .subtitle::before{
+        left: 17%;
+    }
+    .article:nth-child(2) .subtitle {
+        font-size: 12px;
+        line-height: 14px;
+        padding-left: 111px;
+        margin-top: -49px;
+    }
+    .article:nth-child(3) .subtitle{
+        margin-top: -68px;
+    }
+    .container .article:nth-child(2) p {
+        margin-left: -8px;
+    }
+    .container .title{
+        margin-left: 67px;
+    }
+    .text p {
+        font-size: 17px;
+        width: 311px;
+        margin-left: -6px;
+    }
+    .footer{
+        margin-left: -14px;
     }
 }
