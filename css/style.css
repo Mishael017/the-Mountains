@@ -963,7 +963,7 @@ button{
         background-size: 100%;
     }
     .logo{
-        margin-left: 31%;
+        margin-left: 33%;
      }  
     .mobile_menu .menu ul {
         -webkit-box-orient: vertical;
@@ -973,23 +973,23 @@ button{
         margin-left: 0;
     }
     .title-text{
-        margin-top: 3px;
+        margin-top: -20px;
     }
     .title-text .subtitle{
         font-size: 10px;
-        letter-spacing: 3px;
+        letter-spacing: 2.1px;
         margin-left: -102px;
     }
     .title-text .subtitle::before {
         left: 27%;
-        top: 110%;
+        top: 122%;
         width: 27px;
         height: 0.7px;
     }       
     .title-text h1 {
         line-height: 50px;
-        font-size: 32px;
-        margin-top: -15px;
+        font-size: 40px;
+        margin-top: -10px;
         margin-bottom: 21px
     }
     .nav{
@@ -1005,7 +1005,7 @@ button{
         margin-top: 105px;
     }
     .height{
-        height: 482px;
+        height: 467px;
     }    
     .container .title{
         margin-bottom: 20px;
@@ -1021,6 +1021,7 @@ button{
         margin-left: 23px;
         margin-top: -49px;
         margin-bottom: 35px;
+        padding-left: 84px;
     }
     .article:nth-child(3) .subtitle{
         margin-left: 10px;
@@ -1043,6 +1044,13 @@ button{
     
 }
 
+@media only screen and (max-width: 440px){
+
+    .height{
+        height: 454px;
+    }
+}
+
 @media only screen and (max-width: 385px){
 
     .subtitle::before{
@@ -1052,6 +1060,7 @@ button{
         height: 426px;
     }
 }
+
 @media only screen and (max-width: 376px){
      
     body{
