@@ -82,7 +82,7 @@ header{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 15px;
+    padding-top: 50px;
     margin-left: 80px;
     margin-right: 80px;
 }
@@ -117,16 +117,16 @@ header{
     line-height: 38px;
     letter-spacing: 0.01em;
     text-transform: capitalize;
-    margin-right: 97px;
+    margin-right: 160px;
 }
 .account span{
     font-family: Gilroy;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 21px;
     color: #FFFFFF;
     margin-top: -20px;
-    margin-left: 35px;
+    margin-left: 30px;
     display: block;
     -webkit-transition: ease-in-out 300ms;
     -o-transition: ease-in-out 300ms;
@@ -250,7 +250,7 @@ button{
     line-height: 22px;
     color: #FFFFFF;
     margin-left: -27px;
-    margin-bottom: 47px;
+    margin-bottom: 52px;
 }
 .social a{
     margin-bottom: 30px;
@@ -259,6 +259,7 @@ button{
     margin-top: 63px;
     margin-left: auto;
     margin-right: 41px;
+    margin-bottom: 36px;
 }
 .scale .start{
    margin-left: -12px;
@@ -282,10 +283,39 @@ button{
 }
 .scale a:hover{
     color: #FBD784;
-}  
+}
+.scale::after{
+    content: "";
+
+}
+input[type=range]{ 
+    -webkit-transform: rotate(90deg); 
+        -ms-transform: rotate(90deg); 
+            transform: rotate(90deg);
+    margin-top: 165px;
+    margin-right: -50px;
+    margin-left: -156px;
+    width: 245px;
+    height: 3px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+.cursor::-webkit-slider-thumb {
+    -webkit-appearance: none;
+            appearance: none;
+    width: 3px;
+    height: 60px;
+    margin-left: 25px;
+    background: #FFFFFF;    
+    opacity: 1;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
 .title-text{
-    width: 53%;
-    margin-top: 45px;
+    width: 54%;
+    margin-top: 40px;
     margin-left: auto;
     line-height: 100px;
     z-index: 6;
@@ -396,7 +426,7 @@ button{
 }
 .text-two{
     position: relative;
-    margin-left: 69px;
+    margin-left: 114px;
     margin-right: 0;
 }
 .text-two::before{
@@ -446,7 +476,7 @@ button{
     position: relative;
     margin-bottom: 18px;
     margin-top: -2px;
-    padding-left: 106px;
+    padding-left: 105px;
 }
 .subtitle::before{
     content: "";
@@ -461,14 +491,20 @@ button{
     height: 2px;
     background-color: #FBD784;
 }
+.article:nth-child(3) .subtitle{
+    margin-top: -10px;
+    margin-bottom: -14px;
+}
 .container .title{
     max-width: 632px;
     font-family: Chronicle Display;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 64px;
     line-height: 77px;
     margin-bottom: 27px;
+    margin-left: 18px;
+    margin-top: 25px;
 }
 .text p{
     font-family: Gilroy;
@@ -477,6 +513,7 @@ button{
     font-size: 16px;
     line-height: 32px;
     margin-bottom: 33px;
+    margin-left: 18px;
 }
 .link{
     display: inline-block;
@@ -486,6 +523,7 @@ button{
     padding-right: 40px;
     font-size: 18px;
     line-height: 22px;
+    margin-left: 18px;
     color: #FBD784;
     text-decoration: none;
     -webkit-transition: ease-in-out 300ms;
@@ -509,7 +547,6 @@ button{
     background-image: url(../img/nav2.svg);
     background-repeat: no-repeat;
 }
-
 .article:nth-child(2){
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -533,15 +570,11 @@ button{
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 15px;
-    color: #FFFFFF
-
-}
-.column{
-    margin-right: 20px;
+    padding-bottom: 120px;
+    color: #FFFFFF;
 }
 .column-one{
-    margin-right: 28%;
+    margin-right: 22%;
 }
 .column-one .footer-text {
     font-family: Gilroy;
@@ -574,6 +607,9 @@ button{
     color: #FBD784;
     margin-bottom: 24px;
 }
+.column-two{
+    margin-right: 4%;
+}
 .column-two ul{
     list-style: none;
     padding-left: 0;
@@ -592,6 +628,9 @@ button{
 }
 .column-two ul li a:hover{
     color: #FBD784;
+}
+.column-three{
+    margin-right: -16px;
 }
 .column-three h3{
     font-family: Gilroy;
@@ -630,7 +669,7 @@ button{
 @media only screen and (max-width: 1480px){
      
     .container{
-        max-width: 96%;
+        max-width: 100%;
     }
     
 }
@@ -659,12 +698,11 @@ button{
         margin-bottom: 51px;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        margin-left: 10%;
         height: auto;
     }
     .article .subtitle{
-        margin-top: -40px;
-        margin-left: 18px;
+        margin-top: -32px;
+        margin-left: 37px;
     }
     .article .subtitle::before{
         top: 48%;
@@ -685,27 +723,29 @@ button{
         font-size: 36px;
         line-height: 43px;
         margin-left: 54px;
-        margin-top: -18px;
+        margin-top: -5px;
     }
     .text p{
         font-size: 18px;
         line-height: 32px;
-        margin-left: -23px;
     }
     .text-one::before{
         font-size: 156px;
         line-height: 156px;
-        margin-left: -11px;
+        margin-left: 12px;
+        margin-top: 11px;
     }
     .text-two::before{
         font-size: 156px;
         line-height: 156px;
-        margin-left: -11px;
+        margin-left: 12px;
+        margin-top: 11px;
     }
     .text-three::before{
         font-size: 156px;
         line-height: 156px;
-        margin-left: -11px;
+        margin-left: 12px;
+        margin-top: 11px;
     }
     .link{
        font-size: 16px;
@@ -727,6 +767,8 @@ button{
             -ms-flex-direction: column;
                 flex-direction: column;
         text-align: center;
+        padding-bottom: 30px;
+        
         
     }
     .column-one .footer-text {
@@ -777,7 +819,10 @@ button{
     .main{
         margin-top: 132px;
     }
-
+    input[type=range]{ 
+        margin-right: -105px;
+        margin-left: -106px;
+    }
 }
 
 @media only screen and (max-width: 806px){
@@ -830,12 +875,12 @@ button{
         line-height: 20px;
     }
     .title-text .subtitle{
-        margin-left: -70px;
-        margin-top: 40px;
+        margin-left: -97px;
+        margin-top: 42px;
     }
     .subtitle::before{
         top: 162%;
-        left: 12%;
+        left: 16%;
         width: 48px;
     }
     .title-text h1{
@@ -849,7 +894,10 @@ button{
     .scale {
         margin-left: auto;
         margin-top: 326px;
-        margin-right: -15px;
+        margin-right: 0;
+    }
+    input[type=range]{ 
+        margin-top: 430px;
     }
     .footer{
         -webkit-box-orient: vertical;
@@ -944,15 +992,18 @@ button{
     .scale{
         margin-top: 380px;
     }
+    input[type=range] {
+        margin-top: 483px;
+    }
     .height{
-        height: 616px;
+        height: 670px;
     }
    
 }
 @media only screen and (max-width: 500px){
 
     .height{
-        height: 549px;
+        height: 576px;
     }
     
 }
@@ -964,6 +1015,10 @@ button{
     }
     .logo{
         margin-left: 33%;
+        margin-right: 0;
+     }
+    .button{
+         margin-right: 5px;
      }  
     .mobile_menu .menu ul {
         -webkit-box-orient: vertical;
@@ -978,10 +1033,10 @@ button{
     .title-text .subtitle{
         font-size: 10px;
         letter-spacing: 2.1px;
-        margin-left: -102px;
+        margin-left: -113px;
     }
     .title-text .subtitle::before {
-        left: 27%;
+        left: 26%;
         top: 122%;
         width: 27px;
         height: 0.7px;
@@ -990,65 +1045,71 @@ button{
         line-height: 50px;
         font-size: 40px;
         margin-top: -10px;
-        margin-bottom: 21px
+        margin-bottom: 21px;
+        margin-left: -10px;
     }
     .nav{
         font-size: 15px;
+        margin-left: -10px;
     }
     .social{
         margin-top: 593px;
+        margin-left: 18px;
     }
     .scale{
         margin-top: 533px;
+    }
+    input[type=range] {
+        margin-top: 633px;
+        margin-right: -103px;
     }
     .main {
         margin-top: 105px;
     }
     .height{
-        height: 467px;
+        height: 508px;
     }    
     .container .title{
         margin-bottom: 20px;
-        margin-left: 34px;
+        margin-left: 75px;
     }
     .container .article:nth-child(2) .title{
-        margin-top: -25px;
+        margin-top: -9px;
+        margin-left: 75px;
     }
     .text::before{
         font-size: 139px;
     }
     .article .subtitle{
+        font-size: 12px;
         margin-left: 23px;
-        margin-top: -49px;
-        margin-bottom: 35px;
-        padding-left: 84px;
+        margin-top: -34px;
+        margin-bottom: 14px;
+        padding-left: 102px;
+    }
+    .article .subtitle::before {
+        width: 40px;
+        height: 1.5px;
+        left: 12%;
     }
     .article:nth-child(3) .subtitle{
-        margin-left: 10px;
-        margin-top: -65px;
-        margin-bottom: 19px;
-    }
-    .article .subtitle::before{
-        left: 5%;
+        margin-left: 26px;
+        margin-top: -54px;
+        margin-bottom: 5px;
     }
     .text-two::before{
-        margin-left: 0;
+        margin-left: 30px;
     }
-    .container .article:nth-child(2) p{
-        margin-left: -25px;
+    .text-three::before{
+        margin-left: 30px;
     }
     .container .article .thumnail img{
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 6%
+    }
+    .subtitle{
+        letter-spacing: 4.5px;
     }
     
-}
-
-@media only screen and (max-width: 440px){
-
-    .height{
-        height: 454px;
-    }
 }
 
 @media only screen and (max-width: 385px){
@@ -1057,7 +1118,7 @@ button{
         left: 31%;
     }
     .height{
-        height: 426px;
+        height: 437px;
     }
 }
 
@@ -1091,11 +1152,11 @@ button{
         margin-top: 512px;
     }
     .title-text .subtitle{
-        margin-left: -100px;
+        margin-left: -113px;
     }
     .title-text .subtitle::before{
-        left: 30%;
-        top: 112%;
+        left: 29%;
+        top: 119%;
     }
     .title-text h1{
         width: 136%;
@@ -1103,57 +1164,107 @@ button{
     }
     .text-one::before {
         font-size: 156px;
-        margin-left: -16px;
+        margin-left: 32px;
     }
     .text-two::before {
         font-size: 156px;
-        margin-left: -7px;
+        margin-left: 41px;
     }
     .text-three::before {
         font-size: 156px;
-        margin-left: -7px;
+        margin-left: 41px;
     }
     .article .subtitle{
         font-size: 12px;
-        padding-left: 83px;
-        margin-top: -45px;
+        padding-left: 131px;
+        margin-top: -31px;
     }
     .article .subtitle::before {
-        width: 40px;
-        height: 1.5px;
-        left: 8%;
+        left: 21%;
     }
     .article:nth-child(2) .subtitle{
         font-size: 11px;
-        padding-left: 83px;
-        margin-top: -42px;
+        padding-left: 132px;
+        margin-top: -37px;
+    }
+    .container .article:nth-child(2) .title{
+        margin-top: 0
     }
     .article:nth-child(3) .subtitle {
         line-height: 14px;
-        margin-left: 20px;
-        margin-top: -65px;
-        margin-bottom: 19px;
+        margin-left: 23px;
+        margin-top: -54px;
+        margin-bottom: 7px;
+    }
+    .container .article .thumnail img {
+        width: 240px;
+        margin-left: 14%;
+    }
+    .container .title{
+        margin-left: 95px;
+        margin-top: 0;
     }
     .container .title:nth-child(2) {
         font-size: 36px;
     }
     .text p {
         width: 328px;
-        margin-left: -26px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .container .article:nth-child(2) p{
+        margin-left: 16px;
+        margin-right: 16px;
     }
     .link{
         margin-right: 16px;
     }
     .height{
-        height: 413px;
+        height: 357px;
     }
     .footer{
         margin-left: -7px;
     }
+    input[type=range]{
+        margin-top: 612px;
+        margin-right: -115px;
+        margin-left: -111px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    
+    .height{
+        height: 361px;
+    }
+    .text-one::before{
+        
+    }
+    .article .subtitle{
+        padding-left: 130px;
+    }
+    .article .subtitle::before{
+        left: 21%;
+    }
+    .container .title{
+        margin-left: 95px;
+    }
+    .container .article:nth-child(2) .title{
+        margin-left: 104px;
+    }
+    input[type=range] {
+        margin-right: -115px;
+    }
+    .footer{
+        margin-left: -10px;
+    }
 }
 
 @media only screen and (max-width: 320px){
-    
+
+    body{
+        background-size: 120%;
+    }
     .header{
         margin-right: 70px;
     }
@@ -1161,7 +1272,8 @@ button{
         margin-left: 70px;
     }
     .logo{
-        margin-left: 46%;
+        margin-left: 45%;
+        margin-right: 100px;
     }
     button{
         margin-left: -27px
@@ -1170,66 +1282,74 @@ button{
         margin-top: -50px;
     }
     .title-text .subtitle{
-        margin-left: -103px;
+        margin-left: -112px;
     }
     .title-text .subtitle::before {
-        left: 34%;
+        left: 33%;
     }
     .title-text h1{
         width: 136%;
         font-size: 40px;
     }
     .social{
-        margin-top: 471px;
+        margin-top: 528px;
     }
     .scale{
-        margin-top: 406px;
+        margin-top: 475px;
         margin-right: -27px;
     }
+    input[type=range] {
+        margin-top: 575px;
+        margin-left: -81px;
+        margin-right: -139px;
+    }
     .height{
-        height: 354px;
+        height: 358px;
     }
     .container .article .thumnail img{
-        margin-left: 3%;
+        margin-left: 10%;
     }
     .text-one::before {
         font-size: 154px;
-        margin-left: 9px;
+        margin-left: 63px;
     }
     .text-two::before{
-        margin-left: 16px;
+        margin-left: 71px;
     }
     .text-three::before{
-        margin-left: 19px;
+        margin-left: 71px;
+    }
+    .container .article:nth-child(2) .title{
+        margin-left: 128px;
+        margin-top: -4px;
     }
     .article .subtitle{
         margin-left: 25px;
-        padding-left: 104px;
+        padding-left: 160px;
     }
     .article .subtitle::before{
-        left: 17%;
+        left: 27%;
     }
     .article:nth-child(2) .subtitle {
         font-size: 12px;
         line-height: 14px;
-        padding-left: 111px;
-        margin-top: -49px;
+        padding-left: 174px;
+        margin-top: -38px;
     }
     .article:nth-child(3) .subtitle{
-        margin-top: -68px;
+        margin-top: -54px;
     }
     .container .article:nth-child(2) p {
-        margin-left: -16px;
+        margin-left: 39px;
     }
     .container .title{
-        margin-left: 67px;
+        margin-left: 123px;
     }
     .text p {
-        font-size: 17px;
-        width: 311px;
-        margin-left: -16px;
+        font-size: 16px;
+        width: 328px;
+        margin-left: 39px;
     }
-    
     .footer{
         margin-left: -14px;
     }

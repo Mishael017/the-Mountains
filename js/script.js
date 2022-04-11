@@ -18,4 +18,21 @@ $(".scale").on("click","a", function (event) {
   })
 
 
+  let cursor = document.querySelector('.cursor');
+  let one = document.querySelector('.one');
 
+    one.addEventListener('click', function(){
+    cursor.value = '1'
+    })
+
+ let two = document.querySelector('.two');
+
+ two.addEventListener('click', function(){
+     cursor.value = '2'
+ })
+
+ let three = document.querySelector('.three');
+
+ three.addEventListener('click', function(){
+     cursor.value = '3'
+ })
