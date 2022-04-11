@@ -1234,11 +1234,14 @@ input[type=range]{
 
 @media only screen and (max-width: 360px){
     
+    .social{
+        margin-top: 542px
+    }
+    .scale{
+        margin-top: 484px;
+    }
     .height{
         height: 361px;
-    }
-    .text-one::before{
-        
     }
     .article .subtitle{
         padding-left: 130px;
@@ -1253,7 +1256,8 @@ input[type=range]{
         margin-left: 104px;
     }
     input[type=range] {
-        margin-right: -115px;
+        margin-top: 586px;
+        margin-right: -123px;
     }
     .footer{
         margin-left: -10px;
