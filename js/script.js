@@ -9,6 +9,19 @@ let body = document.querySelector('body');
     body.classList.toggle('no-scroll');
 })
 
+const slider = document.querySelector('#myRange');
+const sections = [
+  document.querySelector('.section.one'),
+  document.querySelector('#one'),
+  document.querySelector('#two'),
+  document.querySelector('#three'),
+]
+
+slider.addEventListener('input', (e) => {
+  const sectionIndex = e.target.value;
+  
+  sections[sectionIndex].scrollIntoView({behavior: 'smooth'});
+})
 
 $(".scale").on("click","a", function (event) {
     event.preventDefault();

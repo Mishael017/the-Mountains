@@ -54,15 +54,24 @@ body{
 .no-scroll{
     overflow: hidden;
 }
-.height{
-    width: 566px;
-}
 .h1,
 .h2,
 .logo{
     font-family: Chronicle Display, sans-serif;
     font-style: normal;
     font-weight: 700;
+}
+.container{
+    max-width: 1462px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.scale:active, a:focus{outline: none;}
+.account .acc_photo{
+    height: 20px;
+    width: 20px;
 }
 
    /**Header Page**/
@@ -274,7 +283,7 @@ button{
     display: block;
     text-align: center;
     width: 60px;
-    height: 60px;
+    height: 64px;
     color: #FFFFFF;
     -webkit-transition: ease-in-out 300ms;
     -o-transition: ease-in-out 300ms;
@@ -375,13 +384,7 @@ input[type=range]{
 .main{
     margin-top: 644px;
 }
-.container{
-    max-width: 1462px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 .footer .container{
     max-width: 1462px;
 }
@@ -398,24 +401,21 @@ input[type=range]{
             align-items: center;
     margin-bottom: 200px;
     height: 720px;
+    
 }
 .text{
-    padding-left: 108px;
+    padding-left: 131px;
+    padding-top: 69px;
     max-width: 576px;
-    margin-right: 75px;
-    margin-left: 20px;
-}
-.text-one{
+    margin-right: 114px;
     position: relative;
 }
-.text-one::before{
+.text::before{
    display: block;
    position: absolute;
-   left: -24px;
-   top: -103px;
+   left: 0;
+   top: 0;
    content: "01";
-   width: 240px;
-   height: 240px;
    font-family: Gilroy;
    font-style: normal;
    font-weight: bold;
@@ -424,19 +424,11 @@ input[type=range]{
    color: #FFFFFF;
    opacity: 0.1
 }
-.text-two{
-    position: relative;
-    margin-left: 114px;
-    margin-right: 0;
-}
-.text-two::before{
+.article:nth-child(2) .text::before{
    display: block;
    position: absolute;
-   left: -32px;
-   top: -103px;
+   left: 0;
    content: "02";
-   width: 240px;
-   height: 240px;
    font-family: Gilroy;
    font-style: normal;
    font-weight: bold;
@@ -445,24 +437,22 @@ input[type=range]{
    color: #FFFFFF;
    opacity: 0.1
 }
-.text-three{
-    position: relative;
+.article:nth-child(3) .text::before{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "03";
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 240px;
+    line-height: 240px;
+    color: #FFFF
 }
-.text-three::before{
-   display: block;
-   position: absolute;
-   left: -32px;
-   top: -103px;
-   content: "03";
-   width: 240px;
-   height: 240px;
-   font-family: Gilroy;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 240px;
-   line-height: 240px;
-   color: #FFFFFF;
-   opacity: 0.1
+.article:nth-child(2) .text{
+   margin-left: 114px;
+   margin-right: auto;
 }
 .subtitle{
     font-family: Gilroy;
@@ -475,7 +465,7 @@ input[type=range]{
     color: #FBD784;
     position: relative;
     margin-bottom: 18px;
-    margin-top: -2px;
+    margin-top: 42px;
     padding-left: 105px;
 }
 .subtitle::before{
@@ -491,10 +481,6 @@ input[type=range]{
     height: 2px;
     background-color: #FBD784;
 }
-.article:nth-child(3) .subtitle{
-    margin-top: -10px;
-    margin-bottom: -14px;
-}
 .container .title{
     max-width: 632px;
     font-family: Chronicle Display;
@@ -504,16 +490,14 @@ input[type=range]{
     line-height: 77px;
     margin-bottom: 27px;
     margin-left: 18px;
-    margin-top: 25px;
 }
 .text p{
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 32px;
     margin-bottom: 33px;
-    margin-left: 18px;
 }
 .link{
     display: inline-block;
@@ -523,7 +507,6 @@ input[type=range]{
     padding-right: 40px;
     font-size: 18px;
     line-height: 22px;
-    margin-left: 18px;
     color: #FBD784;
     text-decoration: none;
     -webkit-transition: ease-in-out 300ms;
@@ -570,11 +553,14 @@ input[type=range]{
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 120px;
+    padding-bottom: 96px;
     color: #FFFFFF;
 }
 .column-one{
-    margin-right: 22%;
+    margin-right: 326px;
+}
+.column-two{
+    margin-right: 20px;
 }
 .column-one .footer-text {
     font-family: Gilroy;
@@ -607,9 +593,7 @@ input[type=range]{
     color: #FBD784;
     margin-bottom: 24px;
 }
-.column-two{
-    margin-right: 4%;
-}
+
 .column-two ul{
     list-style: none;
     padding-left: 0;
@@ -628,9 +612,6 @@ input[type=range]{
 }
 .column-two ul li a:hover{
     color: #FBD784;
-}
-.column-three{
-    margin-right: -16px;
 }
 .column-three h3{
     font-family: Gilroy;
@@ -663,26 +644,36 @@ input[type=range]{
 
 
 
-
-
-
-@media only screen and (max-width: 1480px){
+@media only screen and (max-width: 1200px){
      
-    .container{
-        max-width: 100%;
-    }
-    
-}
-@media only screen and (max-width: 1205px){
-
     .main{
         margin-top: 310px;
     }
-   
-
+    .text{
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        padding-left: 0;
+        margin-right: 0;
+        padding-top: 43px;
+    }
+    .article:nth-child(2) .text {
+        margin-left: auto;
+    }
+    .container{
+        max-width: 100%;
+    } 
+    .container .title{
+        font-size: 64px;
+        line-height: 76px;
+        margin-left: 54px;
+        margin-top: -5px;
+    }
+    
 }
-@media only screen and (max-width: 1180px){
 
+@media only screen and (max-width: 1180px){
+    
     .container .title{
         font-size: 64px;
     }
@@ -700,53 +691,6 @@ input[type=range]{
             flex-wrap: wrap;
         height: auto;
     }
-    .article .subtitle{
-        margin-top: -32px;
-        margin-left: 37px;
-    }
-    .article .subtitle::before{
-        top: 48%;
-        left: 6%;
-        width: 48px;
-    }
-    .article:nth-child(3){
-        margin-bottom: 76px;
-    }
-    .text{
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
-        padding-left: 0;
-        margin-right: 0;
-    }
-    .container .title{
-        font-size: 36px;
-        line-height: 43px;
-        margin-left: 54px;
-        margin-top: -5px;
-    }
-    .text p{
-        font-size: 18px;
-        line-height: 32px;
-    }
-    .text-one::before{
-        font-size: 156px;
-        line-height: 156px;
-        margin-left: 12px;
-        margin-top: 11px;
-    }
-    .text-two::before{
-        font-size: 156px;
-        line-height: 156px;
-        margin-left: 12px;
-        margin-top: 11px;
-    }
-    .text-three::before{
-        font-size: 156px;
-        line-height: 156px;
-        margin-left: 12px;
-        margin-top: 11px;
-    }
     .link{
        font-size: 16px;
        float: right;
@@ -754,22 +698,34 @@ input[type=range]{
     .main{
         margin-top: 420px;
     }
-    .height{
-        height: 751px;
+    .text::before{
+        left: -78px;
+        top: -18px;
     }
-}
-
-@media only screen and (max-width: 1150px){
-    
+    .article:nth-child(2) .text::before{
+        left: -78px;
+        top: -18px;
+    }
+    .article:nth-child(3) .text::before{
+        left: -78px;
+        top: -18px;
+    }
+    .container .title{
+        margin-left: 0;
+    }
     .footer{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         text-align: center;
-        padding-bottom: 30px;
-        
-        
+        padding-bottom: 30px;    
+    }
+    .column-two{
+        margin-right: 0;
+    }
+    .height{
+        height: 751px;
     }
     .column-one .footer-text {
         margin-left: auto;
@@ -786,58 +742,6 @@ input[type=range]{
         font-size: 12px;
         text-align: center;
         margin: 0;
-    }
-}
-
-@media only screen and (max-width: 1130px){
-
-    .header_top {
-        margin-top: 125px;
-    }
-    .title-text h1{
-        font-size: 57px;
-    }
-}
-
-@media only screen and (max-width: 960px){
-     
-    .logo{
-        margin-left: -60px;
-    }
-    .account{
-        margin-right: -60px;
-    }
-    .social{
-        margin-left: 10px;
-    }
-    .title-text h1{
-        font-size: 50px;
-    }
-    .scale{
-        margin-right: 0;
-    }
-    .main{
-        margin-top: 132px;
-    }
-    input[type=range]{ 
-        margin-right: -105px;
-        margin-left: -106px;
-    }
-}
-
-@media only screen and (max-width: 806px){
-
-    .logo{
-        margin-left: -52px;
-    }
-    .account{
-        margin-right: -52px;
-    }
-    .social{
-        margin-left: 16px;
-    }
-    .slider{
-        margin-right: 16px;
     }
 }
 
@@ -879,8 +783,8 @@ input[type=range]{
         margin-top: 42px;
     }
     .subtitle::before{
-        top: 162%;
-        left: 16%;
+        top: 51%;
+        left: 8%;
         width: 48px;
     }
     .title-text h1{
@@ -889,7 +793,10 @@ input[type=range]{
     }
     .social{
         margin-left: 0;
-        margin-top: 366px;
+        margin-top: 401px;
+    }
+    .slider{
+        margin-top: 324px;
     }
     .scale {
         margin-left: auto;
@@ -897,13 +804,23 @@ input[type=range]{
         margin-right: 0;
     }
     input[type=range]{ 
-        margin-top: 430px;
+        margin-top: 422px;
+        margin-right: -92px;
+        margin-left: -121px;
+    }
+    .container{
+        max-width: 75%;
+    }
+    .main{
+        margin-top: 85px;
     }
     .footer{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+        padding-left: 0;
+        margin-left: 0;
         text-align: left;
     }
     .column-one .footer-text {
@@ -926,27 +843,13 @@ input[type=range]{
     }
 }
 
-@media only screen and (max-width: 787px){
-
-    .social{
-        margin-top: 401px;
-    }
-    .slider{
-        margin-top: 324px;
-    }
-    .main{
-        margin-top: 85px;
-    }
-    
-}
-
 @media only screen and (max-width: 700px){
 
     .subtitle::before {
-        left: 14%;
+        left: 10%;
     }
     .height{
-        height: 732px;
+        height: 530px;
     }
     .column div{
         margin-left: 0;
@@ -962,20 +865,35 @@ input[type=range]{
         margin-top: 30px;
         margin-left: 0;
     }
-    
-}
-
-@media only screen and (max-width: 650px){
-
+    .text::before{
+        font-size: 156px;
+        left: 3px;
+    }  
     .header_top{
         margin-top: 50px;
     }
-    .height{
-        height: 685px;
+    
+    .article:nth-child(2) .text::before {
+        font-size: 156px;
+        left: 3px;
     }
-   
-
+    .article:nth-child(3) .text::before{
+        font-size: 156px;
+        left: 3px;
+    } 
+    .subtitle{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .container .title {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    .article:nth-child(2) .text p {
+        margin-top: 20px;
+    }
 }
+
 @media only screen and (max-width: 580px){
      
     
@@ -983,7 +901,7 @@ input[type=range]{
         background-size: 182% 18%;
     }
     .subtitle::before {
-        left: 18%;
+        left: 7%;
     }
     .social {
         margin-left: 0;
@@ -996,16 +914,12 @@ input[type=range]{
         margin-top: 483px;
     }
     .height{
-        height: 670px;
+        height: 560px;
+    }
+    .container{
+        max-width: 100%;
     }
    
-}
-@media only screen and (max-width: 500px){
-
-    .height{
-        height: 576px;
-    }
-    
 }
 @media only screen and (max-width: 440px){
     
@@ -1067,18 +981,22 @@ input[type=range]{
         margin-top: 105px;
     }
     .height{
-        height: 508px;
-    }    
+        height: 373px;
+    }
+    .container{
+        margin-left: 16px;
+    }   
     .container .title{
         margin-bottom: 20px;
         margin-left: 75px;
+        margin-top: 10px;
     }
     .container .article:nth-child(2) .title{
-        margin-top: -9px;
+        margin-top: 19px;
         margin-left: 75px;
     }
     .text::before{
-        font-size: 139px;
+        font-size: 156px;
     }
     .article .subtitle{
         font-size: 12px;
@@ -1086,6 +1004,10 @@ input[type=range]{
         margin-top: -34px;
         margin-bottom: 14px;
         padding-left: 102px;
+    }
+    .article:nth-child(2) .subtitle{
+        margin-left: 46px;
+        margin-top: -41px;
     }
     .article .subtitle::before {
         width: 40px;
@@ -1096,6 +1018,24 @@ input[type=range]{
         margin-left: 26px;
         margin-top: -54px;
         margin-bottom: 5px;
+    }
+    .text::before{
+        top: -97px;
+        left: -11px;
+    }
+    .article:nth-child(2) .text::before{
+        top: -97px;
+        left: -11px;
+    }
+    .article:nth-child(3) .text::before{
+        top: -100px;
+        left: -11px;
+    }
+    .text{
+        margin-top: 130px
+    }
+    .text p{
+        width: 328px;
     }
     .text-two::before{
         margin-left: 30px;
@@ -1112,21 +1052,8 @@ input[type=range]{
     
 }
 
-@media only screen and (max-width: 385px){
-
-    .subtitle::before{
-        left: 31%;
-    }
-    .height{
-        height: 437px;
-    }
-}
-
 @media only screen and (max-width: 376px){
      
-    body{
-        background-size: 108%;
-    }
     .logo{
         margin-left: 32%;
     }
@@ -1162,18 +1089,6 @@ input[type=range]{
         width: 136%;
         font-size: 40px;
     }
-    .text-one::before {
-        font-size: 156px;
-        margin-left: 32px;
-    }
-    .text-two::before {
-        font-size: 156px;
-        margin-left: 41px;
-    }
-    .text-three::before {
-        font-size: 156px;
-        margin-left: 41px;
-    }
     .article .subtitle{
         font-size: 12px;
         padding-left: 131px;
@@ -1184,37 +1099,50 @@ input[type=range]{
     }
     .article:nth-child(2) .subtitle{
         font-size: 11px;
-        padding-left: 132px;
         margin-top: -37px;
+        margin-left: 14px;
     }
-    .container .article:nth-child(2) .title{
-        margin-top: 0
+    .article:nth-child(2) .text::before{
+        font-size: 156px;
+        left: 0; 
+    }
+    .article:nth-child(3) .text::before{
+        font-size: 156px;
+        top: -107px
+    }
+    .article:nth-child(2) .text{
+        margin-left: 0;
     }
     .article:nth-child(3) .subtitle {
-        line-height: 14px;
+        line-height: 14px; 
         margin-left: 23px;
         margin-top: -54px;
         margin-bottom: 7px;
     }
+    .article h2{
+        margin-left: 103px;
+    }
+    .article:nth-child(2) h2{
+        margin-left: 13px;
+        margin-top: -4px;
+    }
     .container .article .thumnail img {
         width: 240px;
-        margin-left: 14%;
+        margin-left: 0;
     }
     .container .title{
-        margin-left: 95px;
+        margin-left: 0;
         margin-top: 0;
     }
     .container .title:nth-child(2) {
         font-size: 36px;
     }
-    .text p {
-        width: 328px;
-        margin-left: 16px;
-        margin-right: 16px;
+    .text {
+        margin-top: 0px;
+        margin-left: 0;
     }
-    .container .article:nth-child(2) p{
-        margin-left: 16px;
-        margin-right: 16px;
+    .text::before{
+        left: 0px;
     }
     .link{
         margin-right: 16px;
@@ -1227,7 +1155,7 @@ input[type=range]{
     }
     input[type=range]{
         margin-top: 612px;
-        margin-right: -115px;
+        margin-right: -119px;
         margin-left: -111px;
     }
 }
@@ -1240,6 +1168,9 @@ input[type=range]{
     .scale{
         margin-top: 484px;
     }
+    input[type=range]{
+        width: 218px;
+    }
     .height{
         height: 361px;
     }
@@ -1249,112 +1180,21 @@ input[type=range]{
     .article .subtitle::before{
         left: 21%;
     }
-    .container .title{
-        margin-left: 95px;
+    .article h2{
+        margin-left: 79px;
     }
-    .container .article:nth-child(2) .title{
-        margin-left: 104px;
+    .article:nth-child(2) .text::before{
+        font-size: 156px;
     }
-    input[type=range] {
-        margin-top: 586px;
-        margin-right: -123px;
-    }
-    .footer{
-        margin-left: -10px;
-    }
-}
-
-@media only screen and (max-width: 320px){
-
-    body{
-        background-size: 120%;
-    }
-    .header{
-        margin-right: 70px;
-    }
-    .mobile_menu .menu ul{
-        margin-left: 70px;
-    }
-    .logo{
-        margin-left: 45%;
-        margin-right: 100px;
-    }
-    button{
-        margin-left: -27px
-    }
-    .title-text{
-        margin-top: -50px;
-    }
-    .title-text .subtitle{
-        margin-left: -112px;
-    }
-    .title-text .subtitle::before {
-        left: 33%;
-    }
-    .title-text h1{
-        width: 136%;
-        font-size: 40px;
-    }
-    .social{
-        margin-top: 528px;
-    }
-    .scale{
-        margin-top: 475px;
-        margin-right: -27px;
-    }
-    input[type=range] {
-        margin-top: 575px;
-        margin-left: -81px;
-        margin-right: -139px;
-    }
-    .height{
-        height: 358px;
-    }
-    .container .article .thumnail img{
-        margin-left: 10%;
-    }
-    .text-one::before {
-        font-size: 154px;
-        margin-left: 63px;
-    }
-    .text-two::before{
-        margin-left: 71px;
-    }
-    .text-three::before{
-        margin-left: 71px;
-    }
-    .container .article:nth-child(2) .title{
-        margin-left: 128px;
-        margin-top: -4px;
-    }
-    .article .subtitle{
-        margin-left: 25px;
-        padding-left: 160px;
-    }
-    .article .subtitle::before{
-        left: 27%;
-    }
-    .article:nth-child(2) .subtitle {
-        font-size: 12px;
-        line-height: 14px;
-        padding-left: 174px;
-        margin-top: -38px;
+    .article:nth-child(3) .text::before{
+        font-size: 156px;
+        top: -107px
     }
     .article:nth-child(3) .subtitle{
-        margin-top: -54px;
+        margin-top: -70px;
     }
-    .container .article:nth-child(2) p {
-        margin-left: 39px;
-    }
-    .container .title{
-        margin-left: 123px;
-    }
-    .text p {
-        font-size: 16px;
-        width: 328px;
-        margin-left: 39px;
-    }
-    .footer{
-        margin-left: -14px;
+    input[type=range] { 
+        margin-top: 586px;
+        margin-right: -119px;
     }
 }
